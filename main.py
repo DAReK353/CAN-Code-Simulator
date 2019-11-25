@@ -1,9 +1,15 @@
-import CanNetworkSimulator
-import time
+import functions
+import threading
+from tkinter import *
 
-#for i in range(0, 50):
-#    print(CanNetworkSimulator.readCANNetwork())
+watek = threading.Thread(target=functions.wysylaniekodow, daemon=True)
+watek.start()
 
-while True:
-    print(CanNetworkSimulator.readCANNetwork())
-    time.sleep(0.3)
+root = Tk()
+
+przycisk1 = Button(root, text='Start', command=functions.start)
+przycisk1.grid(row=10, column=1)
+przycisk2 = Button(root, text='Stop', command=functions.stop)
+przycisk2.grid(row=10, column=2)
+
+root.mainloop()

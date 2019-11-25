@@ -73,6 +73,7 @@ LATITUDE = 53.428
 HEIGHT = 25
 ITER = 0
 
+
 def engine():
     global SPEED
 
@@ -87,6 +88,7 @@ def engine():
     st += '0000' + str(SPEED)
     return st
 
+
 def comfort():
     st = "46"
 
@@ -95,12 +97,14 @@ def comfort():
 
     return st
 
+
 def abs():
     st = "03"
     st += "001"
     st += "000000"
 
     return st
+
 
 def hvac():
     st = "08"
@@ -109,12 +113,14 @@ def hvac():
 
     return st
 
+
 def steeringWheel():
     st = "16"
     st += '010'
     st += '000002'
 
     return st
+
 
 def navi():
     global HEIGHT
@@ -124,6 +130,7 @@ def navi():
 
     return st
 
+
 def radio():
     st = "56"
     st += "010"
@@ -131,12 +138,14 @@ def radio():
 
     return st
 
+
 def centralLock():
     st = "35"
     st += '001'
     st += '000001'
 
     return st
+
 
 functionList = [engine, comfort, abs, hvac, steeringWheel, navi, radio, centralLock]
 
@@ -151,10 +160,3 @@ def readCANNetwork():
         ITER = 0
 
     return res
-
-
-
-
-
-
-
