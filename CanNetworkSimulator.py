@@ -1,6 +1,6 @@
 import random
 
-# constant values
+#constant values
 
 '''
 dummy CAN FRAME SPECIFICATION
