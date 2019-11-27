@@ -30,6 +30,22 @@ def resetwyniki():
     textboxnavmodule.delete('1.0', END)
     textboxradiomodule.delete('1.0', END)
     textboxlockmodule.delete('1.0', END)
+    textboxenginefunc.delete('1.0', END)
+    textboxcomfortfunc.delete('1.0', END)
+    textboxabsfunc.delete('1.0', END)
+    textboxhvacfunc.delete('1.0', END)
+    textboxwheelfunc.delete('1.0', END)
+    textboxnavfunc.delete('1.0', END)
+    textboxradiofunc.delete('1.0', END)
+    textboxlockfunc.delete('1.0', END)
+    textboxenginevalue.delete('1.0', END)
+    textboxcomfortvalue.delete('1.0', END)
+    textboxabsvalue.delete('1.0', END)
+    textboxhvacvalue.delete('1.0', END)
+    textboxwheelvalue.delete('1.0', END)
+    textboxnavvalue.delete('1.0', END)
+    textboxradiovalue.delete('1.0', END)
+    textboxlockvalue.delete('1.0', END)
 
 
 def resetlog():
@@ -44,6 +60,8 @@ def insertengine(canmodule, canfunc, canvalue):
     textboxenginemodule.see("end")
     textboxenginefunc.insert(END, canfunc + "\n")
     textboxenginefunc.see("end")
+    textboxenginevalue.insert(END, canvalue + "\n")
+    textboxenginevalue.see("end")
 
 
 def insertcomfort(canmodule, canfunc, canvalue):
@@ -51,6 +69,8 @@ def insertcomfort(canmodule, canfunc, canvalue):
     textboxcomfortmodule.see("end")
     textboxcomfortfunc.insert(END, canfunc + "\n")
     textboxcomfortfunc.see("end")
+    textboxcomfortvalue.insert(END, canvalue + "\n")
+    textboxcomfortvalue.see("end")
 
 
 def insertabs(canmodule, canfunc, canvalue):
@@ -58,6 +78,8 @@ def insertabs(canmodule, canfunc, canvalue):
     textboxabsmodule.see("end")
     textboxabsfunc.insert(END, canfunc + "\n")
     textboxabsfunc.see("end")
+    textboxabsvalue.insert(END, canvalue + "\n")
+    textboxabsvalue.see("end")
 
 
 def inserthvac(canmodule, canfunc, canvalue):
@@ -65,6 +87,8 @@ def inserthvac(canmodule, canfunc, canvalue):
     textboxhvacmodule.see("end")
     textboxhvacfunc.insert(END, canfunc + "\n")
     textboxhvacfunc.see("end")
+    textboxhvacvalue.insert(END, canvalue + "\n")
+    textboxhvacvalue.see("end")
 
 
 def insertwheel(canmodule, canfunc, canvalue):
@@ -72,6 +96,8 @@ def insertwheel(canmodule, canfunc, canvalue):
     textboxwheelmodule.see("end")
     textboxwheelfunc.insert(END, canfunc + "\n")
     textboxwheelfunc.see("end")
+    textboxwheelvalue.insert(END, canvalue + "\n")
+    textboxwheelvalue.see("end")
 
 
 def insertnav(canmodule, canfunc, canvalue):
@@ -79,6 +105,8 @@ def insertnav(canmodule, canfunc, canvalue):
     textboxnavmodule.see("end")
     textboxnavfunc.insert(END, canfunc + "\n")
     textboxnavfunc.see("end")
+    textboxnavvalue.insert(END, canvalue + "\n")
+    textboxnavvalue.see("end")
 
 
 def insertradio(canmodule, canfunc, canvalue):
@@ -86,6 +114,8 @@ def insertradio(canmodule, canfunc, canvalue):
     textboxradiomodule.see("end")
     textboxradiofunc.insert(END, canfunc + "\n")
     textboxradiofunc.see("end")
+    textboxradiovalue.insert(END, canvalue + "\n")
+    textboxradiovalue.see("end")
 
 
 def insertlock(canmodule, canfunc, canvalue):
@@ -93,6 +123,8 @@ def insertlock(canmodule, canfunc, canvalue):
     textboxlockmodule.see("end")
     textboxlockfunc.insert(END, canfunc + "\n")
     textboxlockfunc.see("end")
+    textboxlockvalue.insert(END, canvalue + "\n")
+    textboxlockvalue.see("end")
 
 
 def symulowaniekodow():
@@ -131,7 +163,7 @@ def symulowaniekodow():
                 else:
                     textboxlogi.insert(END, "Unknown CAN code received::" + kod + "\n")
                     textboxlogi.see("end")
-                time.sleep(0.3)
+                time.sleep(0.1)
             else:
                 textboxlogi.insert(END, "Wrong CAN code received::" + kod + "\n")
                 textboxlogi.see("end")
@@ -188,6 +220,8 @@ textboxradiomodule.grid(row=2, column=8)
 textboxlockmodule = Text(root, height=2, width=12)
 textboxlockmodule.grid(row=2, column=9)
 
+infofunct = Label(root, text="Parameter")
+infofunct.grid(row=4, column=2, columnspan=9)
 textboxenginefunc = Text(root, height=2, width=12)
 textboxenginefunc.grid(row=5, column=2)
 textboxcomfortfunc = Text(root, height=2, width=12)
@@ -204,6 +238,25 @@ textboxradiofunc = Text(root, height=2, width=12)
 textboxradiofunc.grid(row=5, column=8)
 textboxlockfunc = Text(root, height=2, width=12)
 textboxlockfunc.grid(row=5, column=9)
+
+infovalue = Label(root, text="Value")
+infovalue.grid(row=7, column=2, columnspan=9)
+textboxenginevalue = Text(root, height=2, width=12)
+textboxenginevalue.grid(row=8, column=2)
+textboxcomfortvalue = Text(root, height=2, width=12)
+textboxcomfortvalue.grid(row=8, column=3)
+textboxabsvalue = Text(root, height=2, width=12)
+textboxabsvalue.grid(row=8, column=4)
+textboxhvacvalue = Text(root, height=2, width=12)
+textboxhvacvalue.grid(row=8, column=5)
+textboxwheelvalue = Text(root, height=2, width=12)
+textboxwheelvalue.grid(row=8, column=6)
+textboxnavvalue = Text(root, height=2, width=12)
+textboxnavvalue.grid(row=8, column=7)
+textboxradiovalue = Text(root, height=2, width=12)
+textboxradiovalue.grid(row=8, column=8)
+textboxlockvalue = Text(root, height=2, width=12)
+textboxlockvalue.grid(row=8, column=9)
 
 przycisk1 = Button(root, text='Reset results', command=resetwyniki)
 przycisk1.grid(row=20, column=2)
