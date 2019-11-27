@@ -56,75 +56,75 @@ def resetlog():
 
 
 def insertengine(canmodule, canfunc, canvalue):
-    textboxenginemodule.insert(END, "Code: " + canmodule + "\n")
     textboxenginemodule.see("end")
-    textboxenginefunc.insert(END, canfunc + "\n")
+    textboxenginemodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxenginefunc.see("end")
-    textboxenginevalue.insert(END, canvalue + "\n")
+    textboxenginefunc.insert(END, canfunc + "\n")
     textboxenginevalue.see("end")
+    textboxenginevalue.insert(END, canvalue + "\n")
 
 
 def insertcomfort(canmodule, canfunc, canvalue):
-    textboxcomfortmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxcomfortmodule.see("end")
-    textboxcomfortfunc.insert(END, canfunc + "\n")
+    textboxcomfortmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxcomfortfunc.see("end")
-    textboxcomfortvalue.insert(END, canvalue + "\n")
+    textboxcomfortfunc.insert(END, canfunc + "\n")
     textboxcomfortvalue.see("end")
+    textboxcomfortvalue.insert(END, canvalue + "\n")
 
 
 def insertabs(canmodule, canfunc, canvalue):
-    textboxabsmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxabsmodule.see("end")
-    textboxabsfunc.insert(END, canfunc + "\n")
+    textboxabsmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxabsfunc.see("end")
-    textboxabsvalue.insert(END, canvalue + "\n")
+    textboxabsfunc.insert(END, canfunc + "\n")
     textboxabsvalue.see("end")
+    textboxabsvalue.insert(END, canvalue + "\n")
 
 
 def inserthvac(canmodule, canfunc, canvalue):
-    textboxhvacmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxhvacmodule.see("end")
-    textboxhvacfunc.insert(END, canfunc + "\n")
+    textboxhvacmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxhvacfunc.see("end")
-    textboxhvacvalue.insert(END, canvalue + "\n")
+    textboxhvacfunc.insert(END, canfunc + "\n")
     textboxhvacvalue.see("end")
+    textboxhvacvalue.insert(END, canvalue + "\n")
 
 
 def insertwheel(canmodule, canfunc, canvalue):
-    textboxwheelmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxwheelmodule.see("end")
-    textboxwheelfunc.insert(END, canfunc + "\n")
+    textboxwheelmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxwheelfunc.see("end")
-    textboxwheelvalue.insert(END, canvalue + "\n")
+    textboxwheelfunc.insert(END, canfunc + "\n")
     textboxwheelvalue.see("end")
+    textboxwheelvalue.insert(END, canvalue + "\n")
 
 
 def insertnav(canmodule, canfunc, canvalue):
-    textboxnavmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxnavmodule.see("end")
-    textboxnavfunc.insert(END, canfunc + "\n")
+    textboxnavmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxnavfunc.see("end")
-    textboxnavvalue.insert(END, canvalue + "\n")
+    textboxnavfunc.insert(END, canfunc + "\n")
     textboxnavvalue.see("end")
+    textboxnavvalue.insert(END, canvalue + "\n")
 
 
 def insertradio(canmodule, canfunc, canvalue):
-    textboxradiomodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxradiomodule.see("end")
-    textboxradiofunc.insert(END, canfunc + "\n")
+    textboxradiomodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxradiofunc.see("end")
-    textboxradiovalue.insert(END, canvalue + "\n")
+    textboxradiofunc.insert(END, canfunc + "\n")
     textboxradiovalue.see("end")
+    textboxradiovalue.insert(END, canvalue + "\n")
 
 
 def insertlock(canmodule, canfunc, canvalue):
-    textboxlockmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxlockmodule.see("end")
-    textboxlockfunc.insert(END, canfunc + "\n")
+    textboxlockmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
     textboxlockfunc.see("end")
-    textboxlockvalue.insert(END, canvalue + "\n")
+    textboxlockfunc.insert(END, canfunc + "\n")
     textboxlockvalue.see("end")
+    textboxlockvalue.insert(END, canvalue + "\n")
 
 
 def symulowaniekodow():
@@ -136,39 +136,35 @@ def symulowaniekodow():
             canmodule = kod[0:2]
             canfunc = kod[2:5]
             canvalue = kod[5:]
-            if len(kod) == 11:
-                textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
-                textboxlogi.see("end")
-                ilosckodow += 1
-                textboxilosckodow.insert(END, "\n"+str(ilosckodow))
-                textboxilosckodow.see("end")
-                strcanmodule = str(canmodule)
-                print(canmodule, canfunc, canvalue)
-                if strcanmodule == '01':
-                    insertengine(canmodule, canfunc, canvalue)
-                elif strcanmodule == '46':
-                    insertcomfort(canmodule, canfunc, canvalue)
-                elif strcanmodule == '03':
-                    insertabs(canmodule, canfunc, canvalue)
-                elif strcanmodule == '08':
-                    inserthvac(canmodule, canfunc, canvalue)
-                elif strcanmodule == '16':
-                    insertwheel(canmodule, canfunc, canvalue)
-                elif strcanmodule == '37':
-                    insertnav(canmodule, canfunc, canvalue)
-                elif strcanmodule == '56':
-                    insertradio(canmodule, canfunc, canvalue)
-                elif strcanmodule == '35':
-                    insertlock(canmodule, canfunc, canvalue)
-                else:
-                    textboxlogi.insert(END, "Unknown CAN code received::" + kod + "\n")
-                    textboxlogi.see("end")
-                time.sleep(0.1)
+            textboxlogi.see("end")
+            textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
+            ilosckodow += 1
+            textboxilosckodow.see("end")
+            textboxilosckodow.insert(END, "\n"+str(ilosckodow))
+            strcanmodule = str(canmodule)
+            print(canmodule, canfunc, canvalue)
+            if strcanmodule == '01':
+                insertengine(canmodule, canfunc, canvalue)
+            elif strcanmodule == '46':
+                insertcomfort(canmodule, canfunc, canvalue)
+            elif strcanmodule == '03':
+                insertabs(canmodule, canfunc, canvalue)
+            elif strcanmodule == '08':
+                inserthvac(canmodule, canfunc, canvalue)
+            elif strcanmodule == '16':
+                insertwheel(canmodule, canfunc, canvalue)
+            elif strcanmodule == '37':
+                insertnav(canmodule, canfunc, canvalue)
+            elif strcanmodule == '56':
+                insertradio(canmodule, canfunc, canvalue)
+            elif strcanmodule == '35':
+                insertlock(canmodule, canfunc, canvalue)
             else:
-                textboxlogi.insert(END, "Wrong CAN code received::" + kod + "\n")
                 textboxlogi.see("end")
-                print(canmodule, canfunc, canvalue)
-                time.sleep(0.3)
+                textboxlogi.insert(END, "Unknown CAN code received::" + kod + "\n")
+            textboxlogi.see("end")
+            print(canmodule, canfunc, canvalue)
+            time.sleep(float(szybkosc.get()))
 
 
 sprawdzanie = threading.Thread(target=symulowaniekodow, daemon=True)
@@ -203,70 +199,76 @@ inforadio.grid(row=1, column=8)
 infolock = Label(root, text="Central Lock")
 infolock.grid(row=1, column=9)
 
-textboxenginemodule = Text(root, height=2, width=12)
+textboxenginemodule = Text(root, height=1, width=13)
 textboxenginemodule.grid(row=2, column=2)
-textboxcomfortmodule = Text(root, height=2, width=12)
+textboxcomfortmodule = Text(root, height=1, width=13)
 textboxcomfortmodule.grid(row=2, column=3)
-textboxabsmodule = Text(root, height=2, width=12)
+textboxabsmodule = Text(root, height=1, width=13)
 textboxabsmodule.grid(row=2, column=4)
-textboxhvacmodule = Text(root, height=2, width=12)
+textboxhvacmodule = Text(root, height=1, width=13)
 textboxhvacmodule.grid(row=2, column=5)
-textboxwheelmodule = Text(root, height=2, width=12)
+textboxwheelmodule = Text(root, height=1, width=13)
 textboxwheelmodule.grid(row=2, column=6)
-textboxnavmodule = Text(root, height=2, width=12)
+textboxnavmodule = Text(root, height=1, width=13)
 textboxnavmodule.grid(row=2, column=7)
-textboxradiomodule = Text(root, height=2, width=12)
+textboxradiomodule = Text(root, height=1, width=13)
 textboxradiomodule.grid(row=2, column=8)
-textboxlockmodule = Text(root, height=2, width=12)
+textboxlockmodule = Text(root, height=1, width=13)
 textboxlockmodule.grid(row=2, column=9)
 
 infofunct = Label(root, text="Parameter")
-infofunct.grid(row=4, column=2, columnspan=9)
-textboxenginefunc = Text(root, height=2, width=12)
-textboxenginefunc.grid(row=5, column=2)
-textboxcomfortfunc = Text(root, height=2, width=12)
-textboxcomfortfunc.grid(row=5, column=3)
-textboxabsfunc = Text(root, height=2, width=12)
-textboxabsfunc.grid(row=5, column=4)
-textboxhvacfunc = Text(root, height=2, width=12)
-textboxhvacfunc.grid(row=5, column=5)
-textboxwheelfunc = Text(root, height=2, width=12)
-textboxwheelfunc.grid(row=5, column=6)
-textboxnavfunc = Text(root, height=2, width=12)
-textboxnavfunc.grid(row=5, column=7)
-textboxradiofunc = Text(root, height=2, width=12)
-textboxradiofunc.grid(row=5, column=8)
-textboxlockfunc = Text(root, height=2, width=12)
-textboxlockfunc.grid(row=5, column=9)
+infofunct.grid(row=3, column=2, columnspan=9)
+textboxenginefunc = Text(root, height=1, width=13)
+textboxenginefunc.grid(row=4, column=2)
+textboxcomfortfunc = Text(root, height=1, width=13)
+textboxcomfortfunc.grid(row=4, column=3)
+textboxabsfunc = Text(root, height=1, width=13)
+textboxabsfunc.grid(row=4, column=4)
+textboxhvacfunc = Text(root, height=1, width=13)
+textboxhvacfunc.grid(row=4, column=5)
+textboxwheelfunc = Text(root, height=1, width=13)
+textboxwheelfunc.grid(row=4, column=6)
+textboxnavfunc = Text(root, height=1, width=13)
+textboxnavfunc.grid(row=4, column=7)
+textboxradiofunc = Text(root, height=1, width=13)
+textboxradiofunc.grid(row=4, column=8)
+textboxlockfunc = Text(root, height=1, width=13)
+textboxlockfunc.grid(row=4, column=9)
 
 infovalue = Label(root, text="Value")
-infovalue.grid(row=7, column=2, columnspan=9)
-textboxenginevalue = Text(root, height=2, width=12)
-textboxenginevalue.grid(row=8, column=2)
-textboxcomfortvalue = Text(root, height=2, width=12)
-textboxcomfortvalue.grid(row=8, column=3)
-textboxabsvalue = Text(root, height=2, width=12)
-textboxabsvalue.grid(row=8, column=4)
-textboxhvacvalue = Text(root, height=2, width=12)
-textboxhvacvalue.grid(row=8, column=5)
-textboxwheelvalue = Text(root, height=2, width=12)
-textboxwheelvalue.grid(row=8, column=6)
-textboxnavvalue = Text(root, height=2, width=12)
-textboxnavvalue.grid(row=8, column=7)
-textboxradiovalue = Text(root, height=2, width=12)
-textboxradiovalue.grid(row=8, column=8)
-textboxlockvalue = Text(root, height=2, width=12)
-textboxlockvalue.grid(row=8, column=9)
+infovalue.grid(row=5, column=2, columnspan=9)
+infovalue = Label(root, text="Value")
+infovalue.grid(row=5, column=2, columnspan=9)
+textboxenginevalue = Text(root, height=1, width=13)
+textboxenginevalue.grid(row=6, column=2)
+textboxcomfortvalue = Text(root, height=1, width=13)
+textboxcomfortvalue.grid(row=6, column=3)
+textboxabsvalue = Text(root, height=1, width=13)
+textboxabsvalue.grid(row=6, column=4)
+textboxhvacvalue = Text(root, height=1, width=13)
+textboxhvacvalue.grid(row=6, column=5)
+textboxwheelvalue = Text(root, height=1, width=13)
+textboxwheelvalue.grid(row=6, column=6)
+textboxnavvalue = Text(root, height=1, width=13)
+textboxnavvalue.grid(row=6, column=7)
+textboxradiovalue = Text(root, height=1, width=13)
+textboxradiovalue.grid(row=6, column=8)
+textboxlockvalue = Text(root, height=1, width=13)
+textboxlockvalue.grid(row=6, column=9)
 
+infoszybkosc = Label(root, text="CAN reading speed:")
+infoszybkosc.grid(row=20, column=2)
+szybkosc = Spinbox(root, format="%.2f", increment=0.1, from_=0.0, to=0.5, width=4)
+szybkosc.grid(row=20, column=3, sticky="news")
 przycisk1 = Button(root, text='Reset results', command=resetwyniki)
-przycisk1.grid(row=20, column=2)
+przycisk1.grid(row=20, column=5, sticky="news")
 przycisk1 = Button(root, text='Reset logs', command=resetlog)
-przycisk1.grid(row=20, column=3)
+przycisk1.grid(row=20, column=6, sticky="news")
 przycisk2 = Button(root, text='Start', command=start)
-przycisk2.grid(row=20, column=4)
+przycisk2.grid(row=20, column=7, sticky="news")
 przycisk3 = Button(root, text='Stop', command=stop)
-przycisk3.grid(row=20, column=5)
+przycisk3.grid(row=20, column=8, sticky="news")
 przycisk4 = Button(root, text='Exit', command=exit)
-przycisk4.grid(row=20, column=9)
+przycisk4.grid(row=20, column=9, sticky="news")
 
 root.mainloop()
