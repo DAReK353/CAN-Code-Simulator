@@ -57,6 +57,8 @@ def resetlog():
 
 def insertengine(canmodule, canfunc, canvalue):
     if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
         textboxenginemodule.see("end")
         textboxenginemodule.insert(END, canmodule + " OK" + "\n")
         textboxenginefunc.see("end")
@@ -64,12 +66,16 @@ def insertengine(canmodule, canfunc, canvalue):
         textboxenginevalue.see("end")
         textboxenginevalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxenginemodule.see("end")
         textboxenginemodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertcomfort(canmodule, canfunc, canvalue):
     if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
         textboxcomfortmodule.see("end")
         textboxcomfortmodule.insert(END, canmodule + " OK" + "\n")
         textboxcomfortfunc.see("end")
@@ -77,12 +83,16 @@ def insertcomfort(canmodule, canfunc, canvalue):
         textboxcomfortvalue.see("end")
         textboxcomfortvalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxcomfortmodule.see("end")
         textboxcomfortmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertabs(canmodule, canfunc, canvalue):
     if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
         textboxabsmodule.see("end")
         textboxabsmodule.insert(END, canmodule + " OK" + "\n")
         textboxabsfunc.see("end")
@@ -90,12 +100,16 @@ def insertabs(canmodule, canfunc, canvalue):
         textboxabsvalue.see("end")
         textboxabsvalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxabsmodule.see("end")
         textboxabsmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def inserthvac(canmodule, canfunc, canvalue):
     if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
         textboxhvacmodule.see("end")
         textboxhvacmodule.insert(END, canmodule + " OK" + "\n")
         textboxhvacfunc.see("end")
@@ -103,12 +117,16 @@ def inserthvac(canmodule, canfunc, canvalue):
         textboxhvacvalue.see("end")
         textboxhvacvalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxhvacmodule.see("end")
         textboxhvacmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertwheel(canmodule, canfunc, canvalue):
     if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
         textboxwheelmodule.see("end")
         textboxwheelmodule.insert(END, canmodule + " OK" + "\n")
         textboxwheelfunc.see("end")
@@ -116,12 +134,16 @@ def insertwheel(canmodule, canfunc, canvalue):
         textboxwheelvalue.see("end")
         textboxwheelvalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxnavmodule.see("end")
         textboxnavmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertnav(canmodule, canfunc, canvalue):
     if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
         textboxnavmodule.see("end")
         textboxnavmodule.insert(END, canmodule + " OK" + "\n")
         textboxnavfunc.see("end")
@@ -129,12 +151,16 @@ def insertnav(canmodule, canfunc, canvalue):
         textboxnavvalue.see("end")
         textboxnavvalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxnavmodule.see("end")
         textboxnavmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertradio(canmodule, canfunc, canvalue):
     if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
         textboxradiomodule.see("end")
         textboxradiomodule.insert(END, canmodule + " OK" + "\n")
         textboxradiofunc.see("end")
@@ -142,6 +168,8 @@ def insertradio(canmodule, canfunc, canvalue):
         textboxradiovalue.see("end")
         textboxradiovalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxradiomodule.see("end")
         textboxradiomodule.insert(END, canmodule + " Error" + "\n")
 
@@ -155,6 +183,8 @@ def insertlock(canmodule, canfunc, canvalue):
         textboxlockvalue.see("end")
         textboxlockvalue.insert(END, canvalue + "\n")
     else:
+        textboxlogi.see("end")
+        textboxlogi.insert(END, "Wrong CAN code format:" + canmodule + canfunc + canvalue + "\n")
         textboxlockmodule.see("end")
         textboxlockmodule.insert(END, canmodule + " Error" + "\n")
 
@@ -168,29 +198,34 @@ def symulowaniekodow():
             canmodule = kod[0:2]
             canfunc = kod[2:5]
             canvalue = kod[5:]
-            textboxlogi.see("end")
-            textboxlogi.insert(END, "CAN code received:" + canmodule + canfunc + canvalue + "\n")
             ilosckodow += 1
             textboxilosckodow.see("end")
             textboxilosckodow.insert(END, "\n"+str(ilosckodow))
             strcanmodule = str(canmodule)
-            print(canmodule, canfunc, canvalue)
             if strcanmodule == '01':
-                insertengine(canmodule, canfunc, canvalue)
+                threngine = threading.Thread(target=insertengine, daemon=False, args=(canmodule, canfunc, canvalue))
+                threngine.start()
             elif strcanmodule == '46':
-                insertcomfort(canmodule, canfunc, canvalue)
+                thrcomfort = threading.Thread(target=insertcomfort, daemon=False, args=(canmodule, canfunc, canvalue))
+                thrcomfort.start()
             elif strcanmodule == '03':
-                insertabs(canmodule, canfunc, canvalue)
+                thrabs = threading.Thread(target=insertabs, daemon=False, args=(canmodule, canfunc, canvalue))
+                thrabs.start()
             elif strcanmodule == '08':
-                inserthvac(canmodule, canfunc, canvalue)
+                thrhvac = threading.Thread(target=inserthvac, daemon=False, args=(canmodule, canfunc, canvalue))
+                thrhvac.start()
             elif strcanmodule == '16':
-                insertwheel(canmodule, canfunc, canvalue)
+                thrwheel = threading.Thread(target=insertwheel, daemon=False, args=(canmodule, canfunc, canvalue))
+                thrwheel.start()
             elif strcanmodule == '37':
-                insertnav(canmodule, canfunc, canvalue)
+                thrnav = threading.Thread(target=insertnav, daemon=False, args=(canmodule, canfunc, canvalue))
+                thrnav.start()
             elif strcanmodule == '56':
-                insertradio(canmodule, canfunc, canvalue)
+                thrradio = threading.Thread(target=insertradio, daemon=False, args=(canmodule, canfunc, canvalue))
+                thrradio.start()
             elif strcanmodule == '35':
-                insertlock(canmodule, canfunc, canvalue)
+                thrlock = threading.Thread(target=insertlock, daemon=False, args=(canmodule, canfunc, canvalue))
+                thrlock.start()
             else:
                 textboxlogi.see("end")
                 textboxlogi.insert(END, "Unknown CAN code received::" + kod + "\n")
