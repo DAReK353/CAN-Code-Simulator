@@ -56,75 +56,107 @@ def resetlog():
 
 
 def insertengine(canmodule, canfunc, canvalue):
-    textboxenginemodule.see("end")
-    textboxenginemodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxenginefunc.see("end")
-    textboxenginefunc.insert(END, canfunc + "\n")
-    textboxenginevalue.see("end")
-    textboxenginevalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxenginemodule.see("end")
+        textboxenginemodule.insert(END, canmodule + " OK" + "\n")
+        textboxenginefunc.see("end")
+        textboxenginefunc.insert(END, canfunc + "\n")
+        textboxenginevalue.see("end")
+        textboxenginevalue.insert(END, canvalue + "\n")
+    else:
+        textboxenginemodule.see("end")
+        textboxenginemodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertcomfort(canmodule, canfunc, canvalue):
-    textboxcomfortmodule.see("end")
-    textboxcomfortmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxcomfortfunc.see("end")
-    textboxcomfortfunc.insert(END, canfunc + "\n")
-    textboxcomfortvalue.see("end")
-    textboxcomfortvalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxcomfortmodule.see("end")
+        textboxcomfortmodule.insert(END, canmodule + " OK" + "\n")
+        textboxcomfortfunc.see("end")
+        textboxcomfortfunc.insert(END, canfunc + "\n")
+        textboxcomfortvalue.see("end")
+        textboxcomfortvalue.insert(END, canvalue + "\n")
+    else:
+        textboxcomfortmodule.see("end")
+        textboxcomfortmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertabs(canmodule, canfunc, canvalue):
-    textboxabsmodule.see("end")
-    textboxabsmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxabsfunc.see("end")
-    textboxabsfunc.insert(END, canfunc + "\n")
-    textboxabsvalue.see("end")
-    textboxabsvalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxabsmodule.see("end")
+        textboxabsmodule.insert(END, canmodule + " OK" + "\n")
+        textboxabsfunc.see("end")
+        textboxabsfunc.insert(END, canfunc + "\n")
+        textboxabsvalue.see("end")
+        textboxabsvalue.insert(END, canvalue + "\n")
+    else:
+        textboxabsmodule.see("end")
+        textboxabsmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def inserthvac(canmodule, canfunc, canvalue):
-    textboxhvacmodule.see("end")
-    textboxhvacmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxhvacfunc.see("end")
-    textboxhvacfunc.insert(END, canfunc + "\n")
-    textboxhvacvalue.see("end")
-    textboxhvacvalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxhvacmodule.see("end")
+        textboxhvacmodule.insert(END, canmodule + " OK" + "\n")
+        textboxhvacfunc.see("end")
+        textboxhvacfunc.insert(END, canfunc + "\n")
+        textboxhvacvalue.see("end")
+        textboxhvacvalue.insert(END, canvalue + "\n")
+    else:
+        textboxhvacmodule.see("end")
+        textboxhvacmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertwheel(canmodule, canfunc, canvalue):
-    textboxwheelmodule.see("end")
-    textboxwheelmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxwheelfunc.see("end")
-    textboxwheelfunc.insert(END, canfunc + "\n")
-    textboxwheelvalue.see("end")
-    textboxwheelvalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxwheelmodule.see("end")
+        textboxwheelmodule.insert(END, canmodule + " OK" + "\n")
+        textboxwheelfunc.see("end")
+        textboxwheelfunc.insert(END, canfunc + "\n")
+        textboxwheelvalue.see("end")
+        textboxwheelvalue.insert(END, canvalue + "\n")
+    else:
+        textboxnavmodule.see("end")
+        textboxnavmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertnav(canmodule, canfunc, canvalue):
-    textboxnavmodule.see("end")
-    textboxnavmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxnavfunc.see("end")
-    textboxnavfunc.insert(END, canfunc + "\n")
-    textboxnavvalue.see("end")
-    textboxnavvalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxnavmodule.see("end")
+        textboxnavmodule.insert(END, canmodule + " OK" + "\n")
+        textboxnavfunc.see("end")
+        textboxnavfunc.insert(END, canfunc + "\n")
+        textboxnavvalue.see("end")
+        textboxnavvalue.insert(END, canvalue + "\n")
+    else:
+        textboxnavmodule.see("end")
+        textboxnavmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertradio(canmodule, canfunc, canvalue):
-    textboxradiomodule.see("end")
-    textboxradiomodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxradiofunc.see("end")
-    textboxradiofunc.insert(END, canfunc + "\n")
-    textboxradiovalue.see("end")
-    textboxradiovalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxradiomodule.see("end")
+        textboxradiomodule.insert(END, canmodule + " OK" + "\n")
+        textboxradiofunc.see("end")
+        textboxradiofunc.insert(END, canfunc + "\n")
+        textboxradiovalue.see("end")
+        textboxradiovalue.insert(END, canvalue + "\n")
+    else:
+        textboxradiomodule.see("end")
+        textboxradiomodule.insert(END, canmodule + " Error" + "\n")
 
 
 def insertlock(canmodule, canfunc, canvalue):
-    textboxlockmodule.see("end")
-    textboxlockmodule.insert(END, "Code: " + canmodule + " OK" + "\n")
-    textboxlockfunc.see("end")
-    textboxlockfunc.insert(END, canfunc + "\n")
-    textboxlockvalue.see("end")
-    textboxlockvalue.insert(END, canvalue + "\n")
+    if len(canmodule) + len(canfunc) + len(canvalue) == 11:
+        textboxlockmodule.see("end")
+        textboxlockmodule.insert(END, canmodule + " OK" + "\n")
+        textboxlockfunc.see("end")
+        textboxlockfunc.insert(END, canfunc + "\n")
+        textboxlockvalue.see("end")
+        textboxlockvalue.insert(END, canvalue + "\n")
+    else:
+        textboxlockmodule.see("end")
+        textboxlockmodule.insert(END, canmodule + " Error" + "\n")
 
 
 def symulowaniekodow():
@@ -162,7 +194,6 @@ def symulowaniekodow():
             else:
                 textboxlogi.see("end")
                 textboxlogi.insert(END, "Unknown CAN code received::" + kod + "\n")
-            textboxlogi.see("end")
             print(canmodule, canfunc, canvalue)
             time.sleep(float(szybkosc.get()))
 
